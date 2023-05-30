@@ -13,13 +13,13 @@ import Experiences from "../components/Experiences";
 
 const Homepage = () => {
   return (
-    <div className="   bg-gray-200">
-      <Hero />
-      <Separator title={"Projects"} color={"bg-red-500 "} />
+    <div className="   bg-gray-100 dark:bg-black dark:text-slate-200 transition">
+      <Hero id="home" />
+      <Separator title={"Projects"} color={"bg-gray-400 "} />
       <Projects />
-      <Separator title={"Skills"} color={"bg-indigo-600"} />
+      <Separator title={"Skills"} color={"bg-gray-400"} />
       <Skills />
-      <Separator title={"Education"} color={"bg-red-500 "} />
+      <Separator title={"Education"} color={"bg-gray-400 "} />
 
       <Experiences />
     </div>

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Link } from "react-scroll";
+import { AiOutlineClose, AiOutlineCrown, AiOutlineMenu } from "react-icons/ai";
+import { GrMoon, GrSun } from "react-icons/gr";
+import { BsFillSunFill } from "react-icons/bs";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = () => setIsOpen(!isOpen);
   const [l, setL] = useState(false);
 
   useEffect(() => {
@@ -15,7 +16,10 @@ const Navbar = () => {
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
       document.documentElement.classList.add("dark");
+      setL(true);
     } else {
+      setL(false);
+
       document.documentElement.classList.remove("dark");
     }
 
@@ -29,44 +33,76 @@ const Navbar = () => {
       localStorage.theme = "dark";
     }
     setL(!l);
-    console.log("yeah bpo");
     // Whenever the user explicitly chooses light mode
 
     // Whenever the user explicitly chooses dark mode
   };
   return (
-    <div>
-      <div className="flex justify-between h-10 bg-white">
-        <div className=" px-2 text-2xl flex flex-1 justify-center sm:items-stretch sm:justify-start">
-          King
+    <div className="dark:bg-black dark:text-slate-200">
+      <div className="flex flex-wrap justify-between items-center flex-col sm:flex-row     backdrop-blur      ">
+        <div className=" px-2 flex flex-1 justify-center items-center sm:items-stretch sm:justify-start">
+          <AiOutlineCrown size={48} />
         </div>
 
-        <ul className="hidden sm:flex p-2 list-none items-center gap-2">
-          <li onClick={changeTheme}>Certificates</li>
-          <li>Skills</li>
-          <li>Games</li>
-          <li>Plugins </li>
-          <li>Contact </li>
+        <ul
+          className={`
+
+          ${isOpen ? "flex flex-col" : "hidden"}
+          sm:flex-row sm:flex p-2 list-none items-center gap-4  sm:text-lg font-semibold uppercase hover:cursor-pointer
+          `}
+        >
+          <li>
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => setIsOpen(false)}
+              to="projects"
+              smooth={true}
+              duration={500}
+            >
+              Projects{" "}
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => setIsOpen(false)}
+              to="skills"
+              smooth={true}
+              duration={500}
+            >
+              Skills{" "}
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={() => setIsOpen(false)}
+              to="education"
+              smooth={true}
+              duration={500}
+            >
+              Education{" "}
+            </Link>{" "}
+          </li>
+          <li onClick={changeTheme} className="pr-2">
+            {l ? <BsFillSunFill size={30} /> : <GrMoon size={30} />}
+          </li>
         </ul>
         <button
-          className=" sm:hidden absolute right-1 top-2"
-          onClick={toggleNavbar}
+          className=" sm:hidden absolute right-1 top-1"
+          onClick={() => setIsOpen(!isOpen)}
         >
           {" "}
           {isOpen ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
         </button>
       </div>{" "}
-      <ul
-        className={`sm:hidden  ${
-          isOpen ? "block" : "hidden"
-        }  p-2 list-none flex-col gap-2 `}
-      >
-        <li>Certificates</li>
-        <li>Skills</li>
-        <li>Games</li>
-        <li>Plugins </li>
-        <li>Contact </li>
-      </ul>
     </div>
   );
 };

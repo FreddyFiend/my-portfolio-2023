@@ -24,39 +24,40 @@ const projects = [
       "Zod for react validations",
     ],
     techs: [
-      { icon: FaReact, color: "text-blue-500" },
-      { icon: SiTypescript, color: "text-blue-700" },
-      { icon: SiNestjs, color: "text-red-600" },
-      { icon: SiPrisma, color: "" },
-      { icon: SiSqlite, color: "text-sky-600" },
-      { icon: SiTailwindcss, color: "text-cyan-600" },
+      { title: "React", icon: FaReact, color: "text-blue-500" },
+      { title: "TypeScript", icon: SiTypescript, color: "text-blue-700" },
+      { title: "NestJS", icon: SiNestjs, color: "text-red-600" },
+      { title: "Prisma", icon: SiPrisma, color: "" },
+      { title: "SQLite", icon: SiSqlite, color: "text-sky-600" },
+      { title: "Tailwindcss", icon: SiTailwindcss, color: "text-cyan-600" },
     ],
     image: DinoMock,
   },
   {
     title: "Smart Web Portal",
     desc: [
-      "React/TanStack Query ",
-      "Refresh JWT Tokens in http-only cookie",
-      "Valtio as state management",
-      "Zod for react validations",
+      "File System",
+      "Various user roles",
+      "Lectures, PDFs/PPTs, assignments",
+      "Simplest design",
     ],
     techs: [
       {
+        title: "VueJS",
         icon: FaVuejs,
         color: "text-green-500 ",
       },
-      { icon: SiExpress, color: "text-gray-700" },
-      { icon: SiQuasar, color: "text-sky-600" },
-      { icon: SiMongodb, color: "text-lime-600" },
-      { icon: FaNodeJs, color: "text-green-600" },
+      { title: "ExpressJS", icon: SiExpress, color: "text-gray-400" },
+      { title: "QuasarJS", icon: SiQuasar, color: "text-sky-600" },
+      { title: "MongoDB", icon: SiMongodb, color: "text-lime-600" },
+      { title: "NodeJS", icon: FaNodeJs, color: "text-green-600" },
     ],
     image: SwpMock,
   },
 ];
 const Projects = () => {
   return (
-    <ul className="flex justify-center pt-7 flex-wrap">
+    <ul className="flex justify-center  flex-wrap" name="projects">
       {projects.map((project) => (
         <li className="p-4" key={project.title}>
           <Project

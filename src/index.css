@@ -10,16 +10,26 @@
 }
 
 .btn {
-  @apply rounded-md px-3 py-2 bg-white border-2 border-black  hover:bg-gray-400 hover:text-white transition uppercase font-semibold
-  dark:text-white dark:bg-black;
+  @apply px-3 py-2 
+  text-black hover:text-white transition duration-75 uppercase font-bold
+ bg-gray-300   hover:bg-gray-400 active:bg-gray-500
+  cursor-pointer;
 }
 
 .btn-lime {
-  @apply border-2 border-lime-400 hover:bg-lime-400 hover:text-white active:bg-lime-700;
+  @apply bg-lime-300 hover:bg-lime-400 active:bg-lime-500 
+  /* dark:bg-lime-600 dark:text-gray-100 dark:hover:bg-lime-500 
+  dark:active:bg-lime-800; */;
+}
+
+.btn-cyan {
+  @apply bg-cyan-300 hover:bg-cyan-400 active:bg-cyan-500 
+  /* dark:bg-lime-600 dark:text-gray-100 dark:hover:bg-lime-500 
+  dark:active:bg-lime-800; */;
 }
 
 .btn-orange {
-  @apply bg-orange-300 hover:bg-orange-400 hover:text-white active:bg-orange-700;
+  @apply bg-orange-400 hover:bg-orange-500  active:bg-orange-600;
 }
 
 .badge {

@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <header className="w-screen ">
+      <header className="w-screen fixed top-0 z-10 scroll-smooth">
         <Navbar />
       </header>
       <main>

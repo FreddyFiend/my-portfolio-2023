@@ -5,6 +5,7 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProjectOne from "./pages/ProjectOne";
 import Homepage from "./pages/Homepage";
+import "react-tooltip/dist/react-tooltip.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

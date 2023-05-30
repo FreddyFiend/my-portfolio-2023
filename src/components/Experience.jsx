@@ -9,7 +9,7 @@ const Experience = ({ title, date, description }) => {
       <div className="flex flex-col  relative border-l-2 border-gray-500 basis-4/6 sm:basis-9/12">
         <div className="ball w-3 h-3 rounded-full  absolute bg-gray-500 mt-2 -left-1.5" />
         <div className="flex ">
-          <h6 className="ml-4 bg-sky-300 rounded-md px-2 mb-1 text-base md:text-xl  font-semibold">
+          <h6 className="ml-4 bg-sky-300 rounded-md px-2 mb-1 text-base md:text-xl dark:text-black font-semibold">
             {title}
           </h6>
         </div>

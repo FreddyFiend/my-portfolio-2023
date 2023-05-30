@@ -101,9 +101,12 @@ const skills = [
 
 const Skills = () => {
   return (
-    <ul className=" pt-16 grid grid-cols-3 md:grid-cols-6 sm:grid-cols-4  gap-12">
+    <ul
+      name="skills"
+      className="  grid grid-cols-3 md:grid-cols-6 sm:grid-cols-4  gap-12"
+    >
       {skills.map((s) => (
-        <li className="  flex flex-col items-center">
+        <li key={s.title} className="  flex flex-col items-center">
           <s.icon
             className={` text-[50px] sm:text-[70px] md:text-[90px] opacity-40`}
           />{" "}
