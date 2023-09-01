@@ -2,6 +2,7 @@ import React from "react";
 import Project from "./Project";
 import SwpMock from "../assets/swpmock.jpg";
 import DinoMock from "../assets/dinomock.jpg";
+import Jokes from "../assets/jokes.png";
 import { FaNodeJs, FaReact, FaVuejs } from "react-icons/fa";
 import {
   SiExpress,
@@ -12,9 +13,30 @@ import {
   SiSqlite,
   SiTailwindcss,
   SiTypescript,
+  SiNextdotjs,
+  SiPostgresql,
 } from "react-icons/si";
 
 const projects = [
+  {
+    title: "9JOKES",
+    desc: [
+      "O-Auth with Google",
+      "Upvoting, comments, and categories",
+      "User Profiles with upvotes and uploads",
+      "Modern responsive layout",
+    ],
+    techs: [
+      { title: "Next.js", icon: SiNextdotjs, color: "text-black-900" },
+      { title: "TypeScript", icon: SiTypescript, color: "text-blue-700" },
+      { title: "Prisma", icon: SiPrisma, color: "" },
+      { title: "Postgres", icon: SiPostgresql, color: "" },
+      { title: "Tailwindcss", icon: SiTailwindcss, color: "text-cyan-600" },
+    ],
+    image: Jokes,
+    code: "https://github.com/FreddyFiend/9jokes",
+    demo: "https://9jokes.vercel.app",
+  },
   {
     title: "DinoCompanions",
     desc: [
@@ -32,6 +54,8 @@ const projects = [
       { title: "Tailwindcss", icon: SiTailwindcss, color: "text-cyan-600" },
     ],
     image: DinoMock,
+    code: "https://github.com/FreddyFiend/dino-companions",
+    demo: "https://dino-companions.onrender.com",
   },
   {
     title: "Smart Web Portal",
@@ -53,6 +77,9 @@ const projects = [
       { title: "NodeJS", icon: FaNodeJs, color: "text-green-600" },
     ],
     image: SwpMock,
+
+    code: "https://github.com/FreddyFiend/smart-web-portal",
+    demo: "https://smart-web-portal.onrender.com",
   },
 ];
 const Projects = () => {
@@ -70,7 +97,7 @@ const Projects = () => {
     //   ))}
     // </ul>
 
-    <ul className="grid justify-center overflow-hidden " >
+    <ul className="grid justify-center overflow-hidden ">
       {projects.map((project) => (
         <li className="w-full p-4 " key={project.title}>
           <Project
@@ -78,6 +105,8 @@ const Projects = () => {
             title={project.title}
             techs={project.techs}
             image={project.image}
+            code={project.code}
+            demo={project.demo}
           />
         </li>
       ))}

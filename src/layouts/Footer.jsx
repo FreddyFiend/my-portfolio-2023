@@ -6,13 +6,18 @@ const Footer = () => {
     <div className=" bg-gray-500 dark:bg-gray-800 flex text-white justify-center items-end pt-20 pb-4">
       <div className="flex flex-col justify-center items-center">
         <div className="flex gap-3 justify-center">
-          <BsTwitter size={24} />
-          <BsInstagram size={24} />
-          <BsLinkedin size={24} />
+          <a href="twitter.com/mohsinabro666">
+            <BsTwitter size={24} />
+          </a>
+          <a href="instagram/unholyfiend">
+            <BsInstagram size={24} />
+          </a>
+          <a href="https://www.linkedin.com/in/mohsin-abro-a93798184/">
+            <BsLinkedin size={24} />
+          </a>
         </div>
         <div className="flex gap-3 justify-center pt-4">
-          <p>Terms of Service</p>
-          <p>Privacy Policy</p>
+          <p>All rights reserved</p>
         </div>
         <div className="opacity-30 pt-1">© 2023 Mohsin Abro</div>
       </div>

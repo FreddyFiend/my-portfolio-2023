@@ -19,13 +19,13 @@ const Hero = () => {
       <div className="flex flex-col items-center justify-center hero-section sm:flex-row gap-11">
         <div className="max-w-md pl-4 text-center sm:text-start">
           <h3 className="pt-4 font-mono text-3xl font-bold rotator sm:pt-0 ">
-            Full-Stack Web Developer
+            MOHSIN RAZA
           </h3>
           <p className="pt-2 font-mono">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, qui
-            cum enim autem rerum, dolor ad nihil accusantium blanditiis officiis
-            perferendis voluptatibus dolores laudantium esse repellat dolorem
-            suscipit earum corrupti?
+            Hello, I am a full-stack web developer, I like building scalable
+            applications with clean code, I try to work efficiently with the
+            help of different technologies, and I am always eager to learn new
+            stuff.
           </p>
           <div className="flex justify-center gap-1 pt-2 sm:justify-start">
             <div className="btn">CONTACT</div>

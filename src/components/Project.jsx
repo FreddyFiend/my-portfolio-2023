@@ -1,10 +1,7 @@
 import React from "react";
 import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
-import Separator from "./Separator";
 
-import { Tooltip } from "react-tooltip";
-
-const Project = ({ title, desc, techs, image }) => {
+const Project = ({ title, desc, techs, image, demo, code }) => {
   return (
     <div>
       <div className="flex flex-col p-4 bg-white rounded-md shadow-md dark:bg-gray-900 dark:text-white">
@@ -28,12 +25,17 @@ const Project = ({ title, desc, techs, image }) => {
               ))}
             </ul>
             <div className="flex gap-2 pt-3 ">
-              <button className="flex items-center gap-2 btn ">
-                Code <AiOutlineLink size={24} />{" "}
-              </button>
-              <button className="flex items-center gap-2 btn btn-cyan ">
-                Demo <AiOutlineGithub size={24} />{" "}
-              </button>
+              <a href={code}>
+                <button className="flex items-center gap-2 btn ">
+                  Code <AiOutlineLink size={24} />{" "}
+                </button>
+              </a>
+
+              <a href={demo}>
+                <button className="flex items-center gap-2 btn btn-cyan ">
+                  Demo <AiOutlineGithub size={24} />{" "}
+                </button>
+              </a>
             </div>{" "}
           </div>{" "}
         </div>

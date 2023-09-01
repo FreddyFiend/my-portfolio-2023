@@ -45,7 +45,7 @@ const Navbar = () => {
   };
   return (
     <div className="dark:bg-black dark:text-slate-200">
-      <div className="flex flex-col flex-wrap items-center justify-between sm:flex-row backdrop-blur ">
+      <div className="flex flex-col flex-wrap items-center justify-between sm:flex-row backdrop-blur md:px-12 ">
         <div className="flex items-center justify-center flex-1 px-2 sm:items-stretch sm:justify-start">
           <AiOutlineCrown size={48} />
         </div>
