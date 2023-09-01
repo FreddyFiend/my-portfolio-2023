@@ -23,6 +23,7 @@ import {
   SiVisualstudio,
   SiJavascript,
   SiTypescript,
+  SiNextdotjs,
 } from "react-icons/si";
 import { AiFillHtml5, AiOutlineDesktop, AiFillGithub } from "react-icons/ai";
 import { DiNetbeans } from "react-icons/di";
@@ -80,6 +81,7 @@ const skills = [
   { icon: FaPython, title: "Python" },
   { icon: SiJavascript, title: "Javascript" },
   { icon: SiTypescript, title: "Typescript" },
+  { icon: SiNextdotjs, title: "Next.js" },
   { icon: FaVuejs, title: "Vue.JS" },
   { icon: AiFillGithub, title: "Github" },
   { icon: FaGitAlt, title: "Git" },
@@ -102,11 +104,11 @@ const skills = [
 const Skills = () => {
   return (
     <ul
-      name="skills"
-      className="  grid grid-cols-3 md:grid-cols-6 sm:grid-cols-4  gap-12"
+     
+      className="grid grid-cols-3 gap-12 md:grid-cols-6 sm:grid-cols-4"
     >
       {skills.map((s) => (
-        <li key={s.title} className="  flex flex-col items-center">
+        <li key={s.title} className="flex flex-col items-center ">
           <s.icon
             className={` text-[50px] sm:text-[70px] md:text-[90px] opacity-40`}
           />{" "}

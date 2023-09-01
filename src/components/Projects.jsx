@@ -57,9 +57,22 @@ const projects = [
 ];
 const Projects = () => {
   return (
-    <ul className="flex justify-center  flex-wrap" name="projects">
+    // <ul className="grid justify-center md:grid-cols-2" name="projects">
+    //   {projects.map((project) => (
+    //     <li className="p-4" key={project.title}>
+    //       <Project
+    //         desc={project.desc}
+    //         title={project.title}
+    //         techs={project.techs}
+    //         image={project.image}
+    //       />
+    //     </li>
+    //   ))}
+    // </ul>
+
+    <ul className="grid justify-center overflow-hidden " >
       {projects.map((project) => (
-        <li className="p-4" key={project.title}>
+        <li className="w-full p-4 " key={project.title}>
           <Project
             desc={project.desc}
             title={project.title}

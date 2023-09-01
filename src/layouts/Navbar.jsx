@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
-import { AiOutlineClose, AiOutlineCrown, AiOutlineMenu } from "react-icons/ai";
+import {
+  AiOutlineClose,
+  AiOutlineCrown,
+  AiOutlineFundProjectionScreen,
+  AiOutlineHome,
+  AiOutlineMenu,
+} from "react-icons/ai";
 import { GrMoon, GrSun } from "react-icons/gr";
 import { BsFillSunFill } from "react-icons/bs";
-
+import { LiaToolsSolid } from "react-icons/lia";
+import { PiStudentBold } from "react-icons/pi";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const [l, setL] = useState(false);
 
   useEffect(() => {
@@ -39,8 +45,8 @@ const Navbar = () => {
   };
   return (
     <div className="dark:bg-black dark:text-slate-200">
-      <div className="flex flex-wrap justify-between items-center flex-col sm:flex-row     backdrop-blur      ">
-        <div className=" px-2 flex flex-1 justify-center items-center sm:items-stretch sm:justify-start">
+      <div className="flex flex-col flex-wrap items-center justify-between sm:flex-row backdrop-blur ">
+        <div className="flex items-center justify-center flex-1 px-2 sm:items-stretch sm:justify-start">
           <AiOutlineCrown size={48} />
         </div>
 
@@ -57,8 +63,11 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               onClick={() => setIsOpen(false)}
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content="Homepage"
+              data-tooltip-place="left"
             >
-              Home
+              <AiOutlineHome size={24} />
             </Link>
           </li>
           <li>
@@ -67,8 +76,11 @@ const Navbar = () => {
               to="projects"
               smooth={true}
               duration={500}
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content="Projects"
+              data-tooltip-place="left"
             >
-              Projects{" "}
+              <AiOutlineFundProjectionScreen size={24} />
             </Link>
           </li>
           <li>
@@ -77,8 +89,11 @@ const Navbar = () => {
               to="skills"
               smooth={true}
               duration={500}
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content="Skills"
+              data-tooltip-place="left"
             >
-              Skills{" "}
+              <LiaToolsSolid size={24} />
             </Link>
           </li>
           <li>
@@ -87,8 +102,11 @@ const Navbar = () => {
               to="education"
               smooth={true}
               duration={500}
+              data-tooltip-id="my-tooltip"
+              data-tooltip-content="Education"
+              data-tooltip-place="left"
             >
-              Education{" "}
+              <PiStudentBold size={24} />
             </Link>{" "}
           </li>
           <li onClick={changeTheme} className="pr-2">
@@ -96,7 +114,7 @@ const Navbar = () => {
           </li>
         </ul>
         <button
-          className=" sm:hidden absolute right-1 top-1"
+          className="absolute sm:hidden right-1 top-1"
           onClick={() => setIsOpen(!isOpen)}
         >
           {" "}

@@ -10,10 +10,7 @@
 }
 
 .btn {
-  @apply px-3 py-2 
-  text-black hover:text-white transition duration-75 uppercase font-bold
- bg-gray-300   hover:bg-gray-400 active:bg-gray-500
-  cursor-pointer;
+  @apply px-3 py-2 font-bold text-black uppercase transition duration-75 bg-gray-300 cursor-pointer hover:text-white hover:bg-gray-400 active:bg-gray-500;
 }
 
 .btn-lime {
@@ -23,13 +20,13 @@
 }
 
 .btn-cyan {
-  @apply bg-cyan-300 hover:bg-cyan-400 active:bg-cyan-500 
+  @apply bg-cyan-600 hover:bg-cyan-400 active:bg-cyan-500  text-white
   /* dark:bg-lime-600 dark:text-gray-100 dark:hover:bg-lime-500 
   dark:active:bg-lime-800; */;
 }
 
 .btn-orange {
-  @apply bg-orange-400 hover:bg-orange-500  active:bg-orange-600;
+  @apply bg-orange-400 hover:bg-orange-500 active:bg-orange-600;
 }
 
 .badge {

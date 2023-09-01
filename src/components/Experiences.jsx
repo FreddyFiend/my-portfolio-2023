@@ -3,28 +3,28 @@ import Experience from "./Experience";
 
 const experiences = [
   {
-    title: "Computer Science Degree",
-    date: "2019-2022",
+    title: "Pre-Engineering",
+    date: "2016-2018",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, velit quasi, atque ipsum qui recusandae ullam ratione autem id quod consectetur neque illum doloremque sequi quibusdam. Provident commodi voluptatibus aperiam.",
+      "Graduated from Govt Pilot Higher Secondary School Larkana in July 2018 with 'A' grade.",
   },
   {
-    title: "Computer Science Desdfdsgree",
+    title: "Bachelor's of Computer Science",
     date: "2019-2022",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, velit quasi, atque ipsum qui recusandae ullam ratione autem id quod consectetur neque illum doloremque sequi quibusdam. Provident commodi voluptatibus aperiam.",
+      "Graduated from University of Sindh, Larkana Campus with Bachelor's of science in Computer science degree with GPA of 3.18 out of 4.00. ",
   },
   {
-    title: "Computer Science Desdgree",
-    date: "2019-2022",
+    title: "Artificial Intelligence Course",
+    date: "Jan-Mar 2021",
     description:
-      "Lorem ing elit. Esse, velit quasi, atque ipsum qui recusandae ullam ratione autem id quod consectetur neque illum doloremque sequi quibusdam. Provident commodi voluptatibus aperiam.",
+      "Completed short course on Artificial Intelligence at ZabTech Larkana.",
   },
 ];
 
 const Experiences = () => {
   return (
-    <div name="education" className=" min-h-screen m-auto text-center px-4 ">
+    <div className=" min-h-screen m-auto text-center px-4 ">
       <ol>
         {experiences.map((e) => (
           <li key={e.title}>

@@ -14,30 +14,30 @@ const Hero = () => {
   return (
     <div
       name="home"
-      className=" mx-auto  h-screen flex justify-center items-center max-w-2xl"
+      className="flex items-center justify-center h-screen max-w-2xl mx-auto "
     >
-      <div className="hero-section sm:flex-row flex flex-col justify-center items-center gap-11">
-        <div className="text-center sm:text-start max-w-md pl-4">
-          <h3 className="rotator font-mono pt-4 sm:pt-0 text-3xl font-bold ">
+      <div className="flex flex-col items-center justify-center hero-section sm:flex-row gap-11">
+        <div className="max-w-md pl-4 text-center sm:text-start">
+          <h3 className="pt-4 font-mono text-3xl font-bold rotator sm:pt-0 ">
             Full-Stack Web Developer
           </h3>
-          <p className="font-mono  pt-2">
+          <p className="pt-2 font-mono">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, qui
             cum enim autem rerum, dolor ad nihil accusantium blanditiis officiis
             perferendis voluptatibus dolores laudantium esse repellat dolorem
             suscipit earum corrupti?
           </p>
-          <div className="flex justify-center sm:justify-start pt-2 gap-1">
+          <div className="flex justify-center gap-1 pt-2 sm:justify-start">
             <div className="btn">CONTACT</div>
-            <div className="btn  btn-cyan">SEE PROJECTS</div>
+            <div className="btn btn-cyan">SEE PROJECTS</div>
           </div>
         </div>
 
-        <div className="sm:bg-cyan-300 dark:text-black flex flex-col justify-center items-center  rounded-full p-12">
+        <div className="flex flex-col items-center justify-center p-12 rounded-full sm:bg-cyan-600 dark:text-black">
           {" "}
           <BsPersonFill size={48 + 24 + 24} className="" />
           {/* <img
-          className="h-48 w-48 rounded-full "
+          className="w-48 h-48 rounded-full "
           src={EvanImg}
           alt="face"
           srcset=""

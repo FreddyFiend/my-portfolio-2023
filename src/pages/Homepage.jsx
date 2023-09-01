@@ -1,6 +1,7 @@
 import React from "react";
 // import Cards from "../components/Cards";
 import Hero from "../components/Hero";
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 
 import lineSvg from "../assets/line.svg";
 import line2 from "../assets/line2.svg";
@@ -13,14 +14,13 @@ import Experiences from "../components/Experiences";
 
 const Homepage = () => {
   return (
-    <div className="   bg-gray-100 dark:bg-black dark:text-slate-200 transition">
+    <div className="px-8 transition bg-gray-100 dark:bg-black dark:text-slate-200">
       <Hero id="home" />
-      <Separator title={"Projects"} color={"bg-gray-400 "} />
+      <Separator title={"Projects"} color={"bg-gray-400 "} name="projects" />
       <Projects />
-      <Separator title={"Skills"} color={"bg-gray-400"} />
+      <Separator title={"Skills"} color={"bg-gray-400"} name="skills" />
       <Skills />
-      <Separator title={"Education"} color={"bg-gray-400 "} />
-
+      <Separator title={"Academics"} color={"bg-gray-400 "} name="education" />
       <Experiences />
     </div>
   );
