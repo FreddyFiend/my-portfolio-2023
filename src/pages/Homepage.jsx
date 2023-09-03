@@ -22,6 +22,7 @@ const Homepage = () => {
       <Skills />
       <Separator title={"Academics"} color={"bg-gray-400 "} name="education" />
       <Experiences />
+      <Separator title={"Contact"} color={"bg-gray-400 "} name="contact" />
     </div>
   );
 };

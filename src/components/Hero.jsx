@@ -8,6 +8,7 @@ import {
   BsYoutube,
   BsPersonFill,
 } from "react-icons/bs";
+import { Link } from "react-scroll";
 // import "./index.css";
 const Hero = () => {
   const name = "";
@@ -28,8 +29,12 @@ const Hero = () => {
             stuff.
           </p>
           <div className="flex justify-center gap-1 pt-2 sm:justify-start">
-            <div className="btn">CONTACT</div>
-            <div className="btn btn-cyan">SEE PROJECTS</div>
+            <Link to="contact" smooth={true} duration={500}>
+              <div className="btn">CONTACT</div>
+            </Link>
+            <Link to="projects" smooth={true} duration={500}>
+              <div className="btn btn-cyan">SEE PROJECTS</div>
+            </Link>
           </div>
         </div>
 

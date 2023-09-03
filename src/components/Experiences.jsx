@@ -24,7 +24,7 @@ const experiences = [
 
 const Experiences = () => {
   return (
-    <div className=" min-h-screen m-auto text-center px-4 ">
+    <div className=" pb-8 m-auto text-center px-4 ">
       <ol>
         {experiences.map((e) => (
           <li key={e.title}>
