@@ -24,7 +24,7 @@ const projects = [
       "9GAG Clone",
       "O-Auth with Google",
       "Upvoting, comments, and categories",
-      "User Profiles with upvotes and uploads",
+      "User Profiles with Upvotes and Uploads",
       "Modern responsive layout",
     ],
     techs: [
@@ -42,7 +42,8 @@ const projects = [
     title: "DinoCompanions",
     desc: [
       "E-Commerce for Dino-Pets",
-      "React/TanStack Query ",
+      "Stripe Integration",
+      "React/TanStack Query",
       "Refresh JWT Tokens in http-only cookie",
       "Valtio as state management",
       "Zod for react validations",
@@ -66,7 +67,7 @@ const projects = [
       "File System",
       "Various user roles",
       "Lectures, PDFs/PPTs, assignments",
-      "Simplest design",
+      "Material Design",
     ],
     techs: [
       {
