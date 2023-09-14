@@ -21,6 +21,7 @@ const projects = [
   {
     title: "9JOKES",
     desc: [
+      "9GAG Clone",
       "O-Auth with Google",
       "Upvoting, comments, and categories",
       "User Profiles with upvotes and uploads",
@@ -40,6 +41,7 @@ const projects = [
   {
     title: "DinoCompanions",
     desc: [
+      "E-Commerce for Dino-Pets",
       "React/TanStack Query ",
       "Refresh JWT Tokens in http-only cookie",
       "Valtio as state management",
@@ -60,6 +62,7 @@ const projects = [
   {
     title: "Smart Web Portal",
     desc: [
+      "Learning Management Portal",
       "File System",
       "Various user roles",
       "Lectures, PDFs/PPTs, assignments",
