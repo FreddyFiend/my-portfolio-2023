@@ -13,7 +13,7 @@ const Footer = () => {
           <a href="https://www.instagram.com/unholyfiend">
             <BsInstagram size={24} />
           </a>
-          <a href="https://www.linkedin.com/in/mohsin-abro-a93798184/">
+          <a href="https://www.linkedin.com/in/mohsin-raza-a93798184/">
             <BsLinkedin size={24} />
           </a>
         </div>
