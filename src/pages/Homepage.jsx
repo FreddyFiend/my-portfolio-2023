@@ -10,6 +10,7 @@ import Projects from "../components/Projects";
 
 import Separator from "../components/Separator";
 import Skills from "../components/Skills";
+import Academics from "../components/Academics";
 import Experiences from "../components/Experiences";
 
 const Homepage = () => {
@@ -21,8 +22,10 @@ const Homepage = () => {
       <Separator title={"Skills"} color={"bg-gray-400"} name="skills" />
       <Skills />
       <Separator title={"Academics"} color={"bg-gray-400 "} name="education" />
+      <Academics />
+      <Separator title={"Experience"} color={"bg-gray-400 "} name="education" />
       <Experiences />
-      <Separator title={"Contact"} color={"bg-gray-400 "} name="contact" />
+      <div class="pb-12"></div>
     </div>
   );
 };

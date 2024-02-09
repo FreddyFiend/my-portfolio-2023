@@ -25,8 +25,8 @@ const Hero = () => {
           <p className="pt-2 font-mono">
             Hello, I am a full-stack web developer, I like building scalable
             applications with clean code, I try to work efficiently with the
-            help of different technologies, and I am always eager to learn new
-            stuff.
+            help of modern technologies, and I am always eager to learn new tech
+            trends.
           </p>
           <div className="flex justify-center gap-1 pt-2 sm:justify-start">
             <Link to="contact" smooth={true} duration={500}>

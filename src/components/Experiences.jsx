@@ -3,22 +3,10 @@ import Experience from "./Experience";
 
 const experiences = [
   {
-    title: "Pre-Engineering",
-    date: "2016-2018",
+    title: "Vue.js & Quasar Developer at Unduit",
+    date: "Oct 2023 - Jan 2024",
     description:
-      "Graduated from Govt Pilot Higher Secondary School Larkana in July 2018 with 'A' grade.",
-  },
-  {
-    title: "Bachelor's of Computer Science",
-    date: "2019-2022",
-    description:
-      "Graduated from University of Sindh, Larkana Campus with Bachelor's of science in Computer science degree with GPA of 3.18 out of 4.00. ",
-  },
-  {
-    title: "Artificial Intelligence Course",
-    date: "Jan-Mar 2021",
-    description:
-      "Completed short course on Artificial Intelligence at ZabTech Larkana.",
+      "Developed Marketplace app, Marketplace Configuration app, App store, Bulk upload app, and Cart app with strict attention to details of Figma designs",
   },
 ];
 
