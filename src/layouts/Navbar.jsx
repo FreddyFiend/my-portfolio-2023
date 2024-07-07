@@ -2,115 +2,87 @@ import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import {
   AiOutlineClose,
-  AiOutlineCrown,
   AiOutlineFundProjectionScreen,
   AiOutlineHome,
   AiOutlineMenu,
 } from "react-icons/ai";
-import { GrMoon, GrSun } from "react-icons/gr";
+import { GrMoon } from "react-icons/gr";
 import { BsFillSunFill } from "react-icons/bs";
 import { LiaToolsSolid } from "react-icons/lia";
 import { PiStudentBold } from "react-icons/pi";
+
+const navItems = [
+  {
+    to: "home",
+    toolTipContent: "Homepage",
+    icon: AiOutlineHome,
+  },
+  {
+    to: "projects",
+    toolTipContent: "Projects",
+    icon: AiOutlineFundProjectionScreen,
+  },
+  {
+    to: "skills",
+    toolTipContent: "Skills",
+    icon: LiaToolsSolid,
+  },
+  {
+    to: "education",
+    toolTipContent: "Education",
+    icon: PiStudentBold,
+  },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [l, setL] = useState(false);
+  const [isThemeDark, setIsThemeDark] = useState(false);
 
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-      setL(true);
-    } else {
-      setL(false);
-
-      document.documentElement.classList.remove("dark");
-    }
-
-    // Whenever the user explicitly chooses to respect the OS preference
-    // localStorage.removeItem('theme')
-  }, [l]);
+    isThemeDark
+      ? document.documentElement.classList.add("dark")
+      : document.documentElement.classList.remove("dark");
+  }, [isThemeDark]);
   const changeTheme = () => {
-    if (localStorage.theme === "dark") {
-      localStorage.theme = "light";
-    } else {
-      localStorage.theme = "dark";
-    }
-    setL(!l);
-    // Whenever the user explicitly chooses light mode
-
-    // Whenever the user explicitly chooses dark mode
+    setIsThemeDark((prev) => !prev);
   };
+
   return (
     <div className="dark:bg-black dark:text-slate-200">
-      <div className="flex flex-col flex-wrap items-center justify-between sm:flex-row backdrop-blur md:px-12 ">
-        <div className="flex items-center justify-center flex-1 px-2 sm:items-stretch sm:justify-start">
-          <AiOutlineCrown size={48} />
-        </div>
-
+      <div className="flex flex-col flex-wrap items-center justify-center w-full mt-2 sm:flex-row md:px-12">
         <ul
           className={`
-
-          ${isOpen ? "flex flex-col" : "hidden"}
-          sm:flex-row sm:flex p-2 list-none items-center gap-4  sm:text-lg font-semibold uppercase hover:cursor-pointer
+          ${isOpen ? "flex " : "hidden"}
+          sm:flex-row sm:flex  shadow-sm rounded-lg  shadow-black list-none  justify-center items-center   sm:text-lg font-semibold uppercase hover:cursor-pointer bg-white
           `}
         >
-          <li>
-            <Link
-              to="home"
-              smooth={true}
-              duration={500}
-              onClick={() => setIsOpen(false)}
+          {navItems.map((item, index) => (
+            <li
+              key={index}
+              className="p-2 border-r border-gray-300 hover:bg-slate-200"
               data-tooltip-id="my-tooltip"
-              data-tooltip-content="Homepage"
-              data-tooltip-place="left"
+              data-tooltip-content={item.toolTipContent}
+              data-tooltip-place="bottom"
             >
-              <AiOutlineHome size={24} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={() => setIsOpen(false)}
-              to="projects"
-              smooth={true}
-              duration={500}
-              data-tooltip-id="my-tooltip"
-              data-tooltip-content="Projects"
-              data-tooltip-place="left"
-            >
-              <AiOutlineFundProjectionScreen size={24} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={() => setIsOpen(false)}
-              to="skills"
-              smooth={true}
-              duration={500}
-              data-tooltip-id="my-tooltip"
-              data-tooltip-content="Skills"
-              data-tooltip-place="left"
-            >
-              <LiaToolsSolid size={24} />
-            </Link>
-          </li>
-          <li>
-            <Link
-              onClick={() => setIsOpen(false)}
-              to="education"
-              smooth={true}
-              duration={500}
-              data-tooltip-id="my-tooltip"
-              data-tooltip-content="Education"
-              data-tooltip-place="left"
-            >
-              <PiStudentBold size={24} />
-            </Link>{" "}
-          </li>
-          <li onClick={changeTheme} className="pr-2">
-            {l ? <BsFillSunFill size={30} /> : <GrMoon size={30} />}
+              <Link
+                to={item.to}
+                smooth={true}
+                duration={500}
+                onClick={() => setIsOpen(false)}
+              >
+                <item.icon size={24} />
+              </Link>
+            </li>
+          ))}
+
+          <li
+            onClick={changeTheme}
+            className="p-2 hover:bg-slate-200"
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="Night mode"
+            data-tooltip-place="bottom"
+          >
+            {isThemeDark ? <BsFillSunFill size={24} /> : <GrMoon size={24} />}
           </li>
         </ul>
         <button

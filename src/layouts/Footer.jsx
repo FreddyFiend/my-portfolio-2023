@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className=" bg-gray-500 dark:bg-gray-800 flex text-white justify-center items-end pt-20 pb-4">
       <div className="flex flex-col justify-center items-center">
-        <p class="pb-2">Contact</p>
+        <p className="pb-2">Contact</p>
         <div className="flex gap-3 justify-center">
           {/* <a href="https://twitter.com/mohsinabro666">
             <BsTwitter size={24} />
@@ -13,7 +13,7 @@ const Footer = () => {
           <a href="https://www.instagram.com/unholyfiend">
             <BsInstagram size={24} />
           </a> */}
-          <a href="https://www.linkedin.com/in/mohsin-raza-a93798184/">
+          <a href="https://www.linkedin.com/in/mohsin-raza-abro">
             <BsLinkedin size={24} />
           </a>
         </div>

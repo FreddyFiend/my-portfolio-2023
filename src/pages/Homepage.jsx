@@ -15,7 +15,7 @@ import Experiences from "../components/Experiences";
 
 const Homepage = () => {
   return (
-    <div className="px-8 transition bg-gray-100 dark:bg-black dark:text-slate-200">
+    <div className="w-full transition bg-gray-100  dark:bg-black dark:text-slate-200">
       <Hero id="home" />
       <Separator title={"Projects"} color={"bg-gray-400 "} name="projects" />
       <Projects />
@@ -23,9 +23,13 @@ const Homepage = () => {
       <Skills />
       <Separator title={"Academics"} color={"bg-gray-400 "} name="education" />
       <Academics />
-      <Separator title={"Experience"} color={"bg-gray-400 "} name="education" />
+      <Separator
+        title={"Experience"}
+        color={"bg-gray-400 "}
+        name="experience"
+      />
       <Experiences />
-      <div class="pb-12"></div>
+      <div className="pb-12"></div>
     </div>
   );
 };
