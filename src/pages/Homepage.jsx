@@ -14,6 +14,11 @@ import Academics from "../components/Academics";
 import Experiences from "../components/Experiences";
 
 const Homepage = () => {
+  useEffect(() => {
+    // Redirect to the desired URL
+    window.location.href = "https://www.mohsinraza.dev";
+  }, []);
+
   return (
     <div className="w-full transition bg-gray-100  dark:bg-black dark:text-slate-200">
       <Hero id="home" />
@@ -23,11 +28,7 @@ const Homepage = () => {
       <Skills />
       <Separator title={"Academics"} color={"bg-gray-400 "} name="education" />
       <Academics />
-      <Separator
-        title={"Experience"}
-        color={"bg-gray-400 "}
-        name="experience"
-      />
+      <Separator title={"Experience"} color={"bg-gray-400 "} name="experience" />
       <Experiences />
       <div className="pb-12"></div>
     </div>
