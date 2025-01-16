@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import Cards from "../components/Cards";
 import Hero from "../components/Hero";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
